@@ -7,9 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <CorePlot/CorePlot.h>
 
-@interface XXAppDelegate : NSObject <NSApplicationDelegate>
+@interface XXAppDelegate : NSObject <NSApplicationDelegate, CPTPlotDataSource>
 
 @property (assign) IBOutlet NSWindow *window;
+
+@property (weak) IBOutlet CPTGraphHostingView *graphHostingView;
+@property (strong) CPTXYGraph *graph;
 
 @end
